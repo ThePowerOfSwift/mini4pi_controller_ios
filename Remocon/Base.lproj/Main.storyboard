@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Remote Controller Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -21,17 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ing-UJ-9hj">
-                                <rect key="frame" x="171" y="319" width="34" height="30"/>
-                                <state key="normal" title="send"/>
-                                <connections>
-                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchDown" id="e4L-M3-SmX"/>
-                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNW-oE-hl9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNO-BZ-src">
-                                <rect key="frame" x="172" y="271" width="30" height="30"/>
-                                <state key="normal" title="next"/>
+                                <rect key="frame" x="138" y="318.5" width="98" height="30"/>
+                                <state key="normal" title="Jog Controller"/>
                                 <connections>
                                     <action selector="connect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="StB-PU-E40"/>
                                 </connections>
@@ -39,13 +31,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ing-UJ-9hj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="61O-SW-PFg"/>
-                            <constraint firstItem="Ing-UJ-9hj" firstAttribute="top" secondItem="CNO-BZ-src" secondAttribute="bottom" constant="18" id="BJ7-n2-8IR"/>
-                            <constraint firstItem="Ing-UJ-9hj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VFR-Ag-7rA"/>
-                            <constraint firstItem="CNO-BZ-src" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="urj-AV-nM5"/>
+                            <constraint firstItem="CNO-BZ-src" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="doT-Zn-J94"/>
+                            <constraint firstItem="CNO-BZ-src" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pAs-q6-ijd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="swj-ty-I7A"/>
+                    <navigationItem key="navigationItem" title="Remote Controller Menu" id="swj-ty-I7A"/>
                     <connections>
                         <segue destination="P5G-RW-VyG" kind="modal" identifier="pushJobControllView" id="h37-Kw-dyv"/>
                     </connections>
@@ -70,7 +60,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="XwY-Tx-8vl">
+                                    <navigationItem title="Jog Controller" id="XwY-Tx-8vl">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="w7a-nE-30y">
                                             <connections>
                                                 <action selector="cancel:" destination="P5G-RW-VyG" id="wSI-PD-nYc"/>

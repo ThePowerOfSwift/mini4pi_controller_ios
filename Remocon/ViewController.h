@@ -12,7 +12,5 @@
 
 - (IBAction)connect:(id)sender;
 
-- (IBAction)action:(id)sender;
-
 @end
 

@@ -29,6 +29,4 @@
     [self performSegueWithIdentifier:@"pushJobControllView" sender:self];
 }
 
-- (IBAction)action:(id)sender {
-}
 @end
