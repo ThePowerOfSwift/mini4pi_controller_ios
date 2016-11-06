@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6E2D891DCE138700FC92FD /* JogControllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2D881DCE138700FC92FD /* JogControllViewController.m */; };
 		F357B0921DCC4872003274BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0911DCC4872003274BA /* main.m */; };
 		F357B0951DCC4872003274BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0941DCC4872003274BA /* AppDelegate.m */; };
 		F357B0981DCC4872003274BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0971DCC4872003274BA /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B6E2D871DCE138700FC92FD /* JogControllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogControllViewController.h; sourceTree = "<group>"; };
+		0B6E2D881DCE138700FC92FD /* JogControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogControllViewController.m; sourceTree = "<group>"; };
 		F357B08D1DCC4872003274BA /* Remocon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remocon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F357B0911DCC4872003274BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F357B0931DCC4872003274BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 		F357B08F1DCC4872003274BA /* Remocon */ = {
 			isa = PBXGroup;
 			children = (
+				0B6E2D871DCE138700FC92FD /* JogControllViewController.h */,
+				0B6E2D881DCE138700FC92FD /* JogControllViewController.m */,
 				F357B0931DCC4872003274BA /* AppDelegate.h */,
 				F357B0941DCC4872003274BA /* AppDelegate.m */,
 				F357B0961DCC4872003274BA /* ViewController.h */,
@@ -217,6 +222,7 @@
 			files = (
 				F357B0981DCC4872003274BA /* ViewController.m in Sources */,
 				F357B0951DCC4872003274BA /* AppDelegate.m in Sources */,
+				0B6E2D891DCE138700FC92FD /* JogControllViewController.m in Sources */,
 				F357B0921DCC4872003274BA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +424,7 @@
 				F357B0B11DCC4872003274BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F357B0B21DCC4872003274BA /* Build configuration list for PBXNativeTarget "RemoconTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				F357B0B41DCC4872003274BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
