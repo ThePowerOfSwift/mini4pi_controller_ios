@@ -7,9 +7,9 @@
 //
 
 #import "JogControllViewController.h"
+#import "MyDefaults.h"
 
 @interface JogControllViewController ()
-
 @property CGPoint buttonOrigin;
 
 @property NSInteger maxValue;
@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationBar.topItem.title = [MyDefaults loadIpAddress];
+    
     UIPanGestureRecognizer *panRecognizer;
     panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
                                                             action:@selector(panJobController:)];
@@ -39,10 +41,11 @@
     
     [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(sendState:) userInfo:nil repeats:YES];
 
-     CFWriteStreamRef writeStream = NULL;
-     CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)@"192.168.1.16", 20000, NULL, &writeStream);
-     outputStream = CFBridgingRelease(writeStream);
-     [outputStream open];
+    CFWriteStreamRef writeStream = NULL;
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)[MyDefaults loadIpAddress], 20000, NULL, &writeStream);
+    outputStream = CFBridgingRelease(writeStream);
+    
+    [outputStream open];
 
 }
 
@@ -78,6 +81,9 @@
     
     if(written != [data length]){
         NSLog(@"write error!!");
+        self.navigationBar.topItem.title = @"Network Error";
+        self.navigationBar.barTintColor = [UIColor redColor];
+//        self.jocControl.titleLabel.textColor = [UIColor redColor];
     }
     lastX = x;
     lastY = y;
