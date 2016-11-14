@@ -16,6 +16,7 @@
 		0B6E2DA11DD6096400FC92FD /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DA01DD6096400FC92FD /* MenuItem.m */; };
 		0B6E2DA41DD60ABC00FC92FD /* ParameterizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DA31DD60ABC00FC92FD /* ParameterizeViewController.m */; };
 		0B6E2DAA1DD7044C00FC92FD /* RemoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DA91DD7044C00FC92FD /* RemoteController.m */; };
+		0B6E2DAD1DD7473F00FC92FD /* HyperOlympicControllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DAC1DD7473F00FC92FD /* HyperOlympicControllViewController.m */; };
 		F357B0921DCC4872003274BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0911DCC4872003274BA /* main.m */; };
 		F357B0951DCC4872003274BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0941DCC4872003274BA /* AppDelegate.m */; };
 		F357B09B1DCC4872003274BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F357B0991DCC4872003274BA /* Main.storyboard */; };
@@ -53,6 +54,8 @@
 		0B6E2DA31DD60ABC00FC92FD /* ParameterizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParameterizeViewController.m; sourceTree = "<group>"; };
 		0B6E2DA81DD7044C00FC92FD /* RemoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteController.h; sourceTree = "<group>"; };
 		0B6E2DA91DD7044C00FC92FD /* RemoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteController.m; sourceTree = "<group>"; };
+		0B6E2DAB1DD7473E00FC92FD /* HyperOlympicControllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperOlympicControllViewController.h; sourceTree = "<group>"; };
+		0B6E2DAC1DD7473F00FC92FD /* HyperOlympicControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperOlympicControllViewController.m; sourceTree = "<group>"; };
 		F357B08D1DCC4872003274BA /* Remocon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remocon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F357B0911DCC4872003274BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F357B0931DCC4872003274BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 		0B6E2D9A1DD608DD00FC92FD /* Contents */ = {
 			isa = PBXGroup;
 			children = (
+				0B6E2DAB1DD7473E00FC92FD /* HyperOlympicControllViewController.h */,
+				0B6E2DAC1DD7473F00FC92FD /* HyperOlympicControllViewController.m */,
 				0B6E2D871DCE138700FC92FD /* JogControllViewController.h */,
 				0B6E2D881DCE138700FC92FD /* JogControllViewController.m */,
 			);
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6E2DAD1DD7473F00FC92FD /* HyperOlympicControllViewController.m in Sources */,
 				0B6E2D981DD6063000FC92FD /* TopMenuViewController.m in Sources */,
 				0B6E2D971DD6063000FC92FD /* MenuCell.m in Sources */,
 				F357B0951DCC4872003274BA /* AppDelegate.m in Sources */,

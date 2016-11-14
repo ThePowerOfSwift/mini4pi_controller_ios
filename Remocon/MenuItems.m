@@ -10,6 +10,7 @@
 #import "MenuItems.h"
 
 #import "JogControllViewController.h"
+#import "HyperOlympicControllViewController.h"
 
 @implementation MenuItems
 
@@ -19,6 +20,10 @@
     [menus addObject:[[MenuItem alloc] initWithTitle:@"Track Circle" vcFactory:^UIViewController *{
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         return [storyboard instantiateViewControllerWithIdentifier:@"JogControll"];
+    }]];
+    [menus addObject:[[MenuItem alloc] initWithTitle:@"Hyper Olympic" vcFactory:^UIViewController *{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        return [storyboard instantiateViewControllerWithIdentifier:@"HyperOlympicControll"];
     }]];
     
     return menus;

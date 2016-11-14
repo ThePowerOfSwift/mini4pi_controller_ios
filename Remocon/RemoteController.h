@@ -8,7 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol RemoteControllerDelegate
+-(void)remoteControllerError;
+-(void)timeout;
+@end
+
 @interface RemoteController : NSObject
 
-- (id)initWithIpAddress:(NSString*)ipAddress;
+@property (weak) id<RemoteControllerDelegate> delegate;
+
+- (id)initWithIpAddress:(NSString*) ipAddress
+                   port:(UInt32) port
+                timeout:(NSTimeInterval)timeout;
+
+- (void)open;
+- (void)close;
+
+- (void)setStatusX:(float)x
+                 y:(float)y;
+
 @end

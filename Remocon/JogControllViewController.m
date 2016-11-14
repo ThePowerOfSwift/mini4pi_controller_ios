@@ -8,20 +8,17 @@
 
 #import "JogControllViewController.h"
 #import "MyDefaults.h"
+#import "RemoteController.h"
 
-@interface JogControllViewController ()
+@interface JogControllViewController () <RemoteControllerDelegate>
 @property CGPoint buttonOrigin;
 
 @property NSInteger maxValue;
-@property NSInteger jogX;
-@property NSInteger jogY;
+@property RemoteController* remoteController;
 
 @end
 
 @implementation JogControllViewController
-{
-    NSOutputStream* outputStream;
-}
 
 
 - (void)viewDidLoad {
@@ -39,18 +36,15 @@
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     self.maxValue = MIN(screenSize.width, screenSize.height) / 4;
     
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(sendState:) userInfo:nil repeats:YES];
 
-    CFWriteStreamRef writeStream = NULL;
-    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)[MyDefaults loadIpAddress], 20000, NULL, &writeStream);
-    outputStream = CFBridgingRelease(writeStream);
-    
-    [outputStream open];
+    self.remoteController = [[RemoteController alloc] initWithIpAddress:[MyDefaults loadIpAddress] port:20000 timeout:0];
+    self.remoteController.delegate = self;
+    [self.remoteController open];
 
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
-    [outputStream close];
+    [self.remoteController close];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,33 +54,6 @@
 
 - (void)viewDidLayoutSubviews{
     self.buttonOrigin = self.jocControl.center;
-}
-
-- (IBAction)sendState:(id)sender{
-    static float lastX = 0, lastY = 0;
-    
-    
-    float x = (float)self.jogX / self.maxValue * 100;
-    float y = (float)self.jogY / self.maxValue * 100;
-
-    
-    if(x==0 && y==0 && lastX==0 && lastY==0){
-        return;
-    }
-    NSString* output = [NSString stringWithFormat:@"%.0f,%.0f\n", x, y];
-    NSLog(@"%@", output);
-    
-    NSData *data = [[NSData alloc] initWithData:[output dataUsingEncoding:NSASCIIStringEncoding]];
-    NSInteger written = [outputStream write:[data bytes] maxLength:[data length]];
-    
-    if(written != [data length]){
-        NSLog(@"write error!!");
-        self.navigationBar.topItem.title = @"Network Error";
-        self.navigationBar.barTintColor = [UIColor redColor];
-//        self.jocControl.titleLabel.textColor = [UIColor redColor];
-    }
-    lastX = x;
-    lastY = y;
 }
 
 /*
@@ -137,13 +104,27 @@
         self.jocControl.center = movedPoint;
         
     }
-    self.jogX = self.buttonOrigin.x - self.jocControl.center.x;
-    self.jogY = self.buttonOrigin.y - self.jocControl.center.y;
+    float x = (self.buttonOrigin.x - self.jocControl.center.x) / self.maxValue * 100;
+    float y = (self.buttonOrigin.y - self.jocControl.center.y) / self.maxValue * 100;
+    [self.remoteController setStatusX:x y:y];
 
+    
     // ドラッグで移動した距離を初期化する
     // これを行わないと、[sender translationInView:]が返す距離は、ドラッグが始まってからの蓄積値となるため、
     // 今回のようなドラッグに合わせてImageを動かしたい場合には、蓄積値をゼロにする
     [sender setTranslation:CGPointZero inView:self.jocControl];
 }
+
+
+#pragma mark <RemotoControllerDelegate>
+- (void)remoteControllerError{
+    self.navigationBar.topItem.title = @"Network Error";
+    self.navigationBar.barTintColor = [UIColor redColor];
+}
+
+-(void)timeout{
+    
+}
+
 
 @end
