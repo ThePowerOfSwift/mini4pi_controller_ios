@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ParameterizeViewController.h"
 
-@interface HyperOlympicControllViewController : ParameterizeViewController<UIGestureRecognizerDelegate>
+@interface HyperOlympicControllViewController : UIViewController<UIGestureRecognizerDelegate>
 - (IBAction)cancel:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;

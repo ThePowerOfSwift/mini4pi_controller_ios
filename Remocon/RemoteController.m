@@ -8,7 +8,7 @@
 
 #import "RemoteController.h"
 
-@interface RemoteController()
+@interface RemoteController() <NSStreamDelegate>
 
 @property float x;
 @property float y;
@@ -49,6 +49,7 @@
     CFWriteStreamRef writeStream = NULL;
     CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)self.ipAddress, self.port, NULL, &writeStream);
     outputStream = CFBridgingRelease(writeStream);
+    outputStream.delegate = self;
     [outputStream open];
     
 }
@@ -99,6 +100,10 @@
     lastX = self.x;
     lastY = self.y;
     
+}
+
+- (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode{
+    NSLog(@"%@", @(eventCode));
 }
 
 

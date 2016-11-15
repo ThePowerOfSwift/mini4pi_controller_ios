@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ParameterizeViewController.h"
 
-@interface JogControllViewController : ParameterizeViewController<UIGestureRecognizerDelegate>
+@interface JogControllViewController : UIViewController<UIGestureRecognizerDelegate>
 - (IBAction)cancel:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *jocControl;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;

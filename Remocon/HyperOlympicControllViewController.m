@@ -27,8 +27,6 @@
     self.navigationBar.topItem.title = [MyDefaults loadIpAddress];
     self.combo = 50;
     
-    
-
     self.remoteController = [[RemoteController alloc] initWithIpAddress:[MyDefaults loadIpAddress] port:20000 timeout:0.1];
     self.remoteController.delegate = self;
     [self.remoteController open];
@@ -59,12 +57,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark <RemotoControllerDelegate>
-- (void)remoteControllerError{
-    self.navigationBar.topItem.title = @"Network Error";
-    self.navigationBar.barTintColor = [UIColor redColor];
-}
-
 - (IBAction)leftTap:(id)sender {
     if(self.isLastTapLeft){
         self.combo = 50;
@@ -87,6 +79,12 @@
         self.combo ++;
     }
     [self.remoteController setStatusX:0 y:self.combo];
+}
+
+#pragma mark <RemotoControllerDelegate>
+- (void)remoteControllerError{
+    self.navigationBar.topItem.title = @"Network Error";
+    self.navigationBar.barTintColor = [UIColor redColor];
 }
 
 -(void)timeout{

@@ -14,9 +14,18 @@
 		0B6E2D981DD6063000FC92FD /* TopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2D961DD6063000FC92FD /* TopMenuViewController.m */; };
 		0B6E2D9E1DD6094C00FC92FD /* MenuItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2D9D1DD6094C00FC92FD /* MenuItems.m */; };
 		0B6E2DA11DD6096400FC92FD /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DA01DD6096400FC92FD /* MenuItem.m */; };
-		0B6E2DA41DD60ABC00FC92FD /* ParameterizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DA31DD60ABC00FC92FD /* ParameterizeViewController.m */; };
 		0B6E2DAA1DD7044C00FC92FD /* RemoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DA91DD7044C00FC92FD /* RemoteController.m */; };
 		0B6E2DAD1DD7473F00FC92FD /* HyperOlympicControllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DAC1DD7473F00FC92FD /* HyperOlympicControllViewController.m */; };
+		0B6E2DAF1DDA1A6600FC92FD /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6E2DAE1DDA1A6600FC92FD /* opencv2.framework */; };
+		0B6E2DB01DDA1A6600FC92FD /* opencv2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6E2DAE1DDA1A6600FC92FD /* opencv2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0B6E2DB41DDA1A7B00FC92FD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6E2DB31DDA1A7B00FC92FD /* AVFoundation.framework */; };
+		0B6E2DB61DDA1A8300FC92FD /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6E2DB51DDA1A8300FC92FD /* AssetsLibrary.framework */; };
+		0B6E2DB81DDA1A8C00FC92FD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6E2DB71DDA1A8C00FC92FD /* CoreMedia.framework */; };
+		0B6E2DC61DDA872C00FC92FD /* VideoProcessingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DBA1DDA872C00FC92FD /* VideoProcessingViewController.mm */; };
+		0B6E2DC81DDA872C00FC92FD /* TemplateVideoProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DBE1DDA872C00FC92FD /* TemplateVideoProcessor.mm */; };
+		0B6E2DC91DDA872C00FC92FD /* VideoProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DC01DDA872C00FC92FD /* VideoProcessor.m */; };
+		0B6E2DCA1DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DC21DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm */; };
+		0B6E2DCB1DDA872C00FC92FD /* FixedCvVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DC41DDA872C00FC92FD /* FixedCvVideoCamera.m */; };
 		F357B0921DCC4872003274BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0911DCC4872003274BA /* main.m */; };
 		F357B0951DCC4872003274BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0941DCC4872003274BA /* AppDelegate.m */; };
 		F357B09B1DCC4872003274BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F357B0991DCC4872003274BA /* Main.storyboard */; };
@@ -35,6 +44,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0B6E2DB11DDA1A6600FC92FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0B6E2DB01DDA1A6600FC92FD /* opencv2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B6E2D871DCE138700FC92FD /* JogControllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogControllViewController.h; sourceTree = "<group>"; };
 		0B6E2D881DCE138700FC92FD /* JogControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogControllViewController.m; sourceTree = "<group>"; };
@@ -50,12 +73,24 @@
 		0B6E2D9D1DD6094C00FC92FD /* MenuItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItems.m; sourceTree = "<group>"; };
 		0B6E2D9F1DD6096400FC92FD /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		0B6E2DA01DD6096400FC92FD /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
-		0B6E2DA21DD60ABC00FC92FD /* ParameterizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterizeViewController.h; sourceTree = "<group>"; };
-		0B6E2DA31DD60ABC00FC92FD /* ParameterizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParameterizeViewController.m; sourceTree = "<group>"; };
 		0B6E2DA81DD7044C00FC92FD /* RemoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteController.h; sourceTree = "<group>"; };
 		0B6E2DA91DD7044C00FC92FD /* RemoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteController.m; sourceTree = "<group>"; };
 		0B6E2DAB1DD7473E00FC92FD /* HyperOlympicControllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperOlympicControllViewController.h; sourceTree = "<group>"; };
 		0B6E2DAC1DD7473F00FC92FD /* HyperOlympicControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperOlympicControllViewController.m; sourceTree = "<group>"; };
+		0B6E2DAE1DDA1A6600FC92FD /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		0B6E2DB31DDA1A7B00FC92FD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0B6E2DB51DDA1A8300FC92FD /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0B6E2DB71DDA1A8C00FC92FD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0B6E2DBA1DDA872C00FC92FD /* VideoProcessingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoProcessingViewController.mm; sourceTree = "<group>"; };
+		0B6E2DBC1DDA872C00FC92FD /* VideoProcessingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoProcessingViewController.h; sourceTree = "<group>"; };
+		0B6E2DBE1DDA872C00FC92FD /* TemplateVideoProcessor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TemplateVideoProcessor.mm; sourceTree = "<group>"; };
+		0B6E2DBF1DDA872C00FC92FD /* TemplateVideoProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateVideoProcessor.h; sourceTree = "<group>"; };
+		0B6E2DC01DDA872C00FC92FD /* VideoProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoProcessor.m; sourceTree = "<group>"; };
+		0B6E2DC11DDA872C00FC92FD /* VideoProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoProcessor.h; sourceTree = "<group>"; };
+		0B6E2DC21DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MotionDetectVideoProcessor1.mm; sourceTree = "<group>"; };
+		0B6E2DC31DDA872C00FC92FD /* MotionDetectVideoProcessor1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionDetectVideoProcessor1.h; sourceTree = "<group>"; };
+		0B6E2DC41DDA872C00FC92FD /* FixedCvVideoCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedCvVideoCamera.m; sourceTree = "<group>"; };
+		0B6E2DC51DDA872C00FC92FD /* FixedCvVideoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedCvVideoCamera.h; sourceTree = "<group>"; };
 		F357B08D1DCC4872003274BA /* Remocon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remocon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F357B0911DCC4872003274BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F357B0931DCC4872003274BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +109,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6E2DB81DDA1A8C00FC92FD /* CoreMedia.framework in Frameworks */,
+				0B6E2DB61DDA1A8300FC92FD /* AssetsLibrary.framework in Frameworks */,
+				0B6E2DB41DDA1A7B00FC92FD /* AVFoundation.framework in Frameworks */,
+				0B6E2DAF1DDA1A6600FC92FD /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +134,6 @@
 				0B6E2D961DD6063000FC92FD /* TopMenuViewController.m */,
 				0B6E2D8A1DD0C1F500FC92FD /* SettingsTableViewController.h */,
 				0B6E2D8B1DD0C1F500FC92FD /* SettingsTableViewController.m */,
-				0B6E2DA21DD60ABC00FC92FD /* ParameterizeViewController.h */,
-				0B6E2DA31DD60ABC00FC92FD /* ParameterizeViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -125,12 +162,31 @@
 			name = MenuItem;
 			sourceTree = "<group>";
 		};
+		0B6E2DB21DDA1A7B00FC92FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B6E2DB71DDA1A8C00FC92FD /* CoreMedia.framework */,
+				0B6E2DB51DDA1A8300FC92FD /* AssetsLibrary.framework */,
+				0B6E2DB31DDA1A7B00FC92FD /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B6E2DB91DDA86E000FC92FD /* VideoProcessor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VideoProcessor;
+			sourceTree = "<group>";
+		};
 		F357B0841DCC4872003274BA = {
 			isa = PBXGroup;
 			children = (
+				0B6E2DAE1DDA1A6600FC92FD /* opencv2.framework */,
 				F357B08F1DCC4872003274BA /* Remocon */,
 				F357B0A91DCC4872003274BA /* RemoconTests */,
 				F357B08E1DCC4872003274BA /* Products */,
+				0B6E2DB21DDA1A7B00FC92FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +202,17 @@
 		F357B08F1DCC4872003274BA /* Remocon */ = {
 			isa = PBXGroup;
 			children = (
+				0B6E2DBA1DDA872C00FC92FD /* VideoProcessingViewController.mm */,
+				0B6E2DBC1DDA872C00FC92FD /* VideoProcessingViewController.h */,
+				0B6E2DBE1DDA872C00FC92FD /* TemplateVideoProcessor.mm */,
+				0B6E2DBF1DDA872C00FC92FD /* TemplateVideoProcessor.h */,
+				0B6E2DC01DDA872C00FC92FD /* VideoProcessor.m */,
+				0B6E2DC11DDA872C00FC92FD /* VideoProcessor.h */,
+				0B6E2DC21DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm */,
+				0B6E2DC31DDA872C00FC92FD /* MotionDetectVideoProcessor1.h */,
+				0B6E2DC41DDA872C00FC92FD /* FixedCvVideoCamera.m */,
+				0B6E2DC51DDA872C00FC92FD /* FixedCvVideoCamera.h */,
+				0B6E2DB91DDA86E000FC92FD /* VideoProcessor */,
 				0B6E2D9B1DD608F000FC92FD /* MenuItem */,
 				0B6E2D991DD608CC00FC92FD /* ViewController */,
 				F357B0931DCC4872003274BA /* AppDelegate.h */,
@@ -190,6 +257,7 @@
 				F357B0891DCC4872003274BA /* Sources */,
 				F357B08A1DCC4872003274BA /* Frameworks */,
 				F357B08B1DCC4872003274BA /* Resources */,
+				0B6E2DB11DDA1A6600FC92FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,8 +352,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B6E2DCB1DDA872C00FC92FD /* FixedCvVideoCamera.m in Sources */,
 				0B6E2DAD1DD7473F00FC92FD /* HyperOlympicControllViewController.m in Sources */,
 				0B6E2D981DD6063000FC92FD /* TopMenuViewController.m in Sources */,
+				0B6E2DCA1DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm in Sources */,
+				0B6E2DC91DDA872C00FC92FD /* VideoProcessor.m in Sources */,
 				0B6E2D971DD6063000FC92FD /* MenuCell.m in Sources */,
 				F357B0951DCC4872003274BA /* AppDelegate.m in Sources */,
 				0B6E2D9E1DD6094C00FC92FD /* MenuItems.m in Sources */,
@@ -295,7 +366,8 @@
 				0B6E2D891DCE138700FC92FD /* JogControllViewController.m in Sources */,
 				F357B0921DCC4872003274BA /* main.m in Sources */,
 				0B6E2DA11DD6096400FC92FD /* MenuItem.m in Sources */,
-				0B6E2DA41DD60ABC00FC92FD /* ParameterizeViewController.m in Sources */,
+				0B6E2DC81DDA872C00FC92FD /* TemplateVideoProcessor.mm in Sources */,
+				0B6E2DC61DDA872C00FC92FD /* VideoProcessingViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +504,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NV35KVEAGR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Remocon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.fukushima.Remocon;
@@ -444,6 +520,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NV35KVEAGR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Remocon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.fukushima.Remocon;
