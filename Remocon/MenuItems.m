@@ -11,6 +11,7 @@
 
 #import "VideoProcessingViewController.h"
 #import "MotionDetectVideoProcessor1.h"
+#import "FaceDetectVideoProcessor1.h"
 
 @implementation MenuItems
 
@@ -26,6 +27,7 @@
         return [storyboard instantiateViewControllerWithIdentifier:@"HyperOlympicControll"];
     }]];
     [menus addObject:[[MenuItem alloc] initWithTitle:@"Motion" vcFactory:^UIViewController *{
+
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         VideoProcessingViewController* vc = [storyboard instantiateViewControllerWithIdentifier:@"VideoControll"];
         vc.videoProcessor = [[VideoProcessor alloc] initWithTitle:@"Motion"
@@ -33,7 +35,17 @@
         
         return vc;
     }]];
-    return menus;
+    /*
+    [menus addObject:[[MenuItem alloc] initWithTitle:@"Face" vcFactory:^UIViewController *{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        VideoProcessingViewController* vc = [storyboard instantiateViewControllerWithIdentifier:@"VideoControll"];
+        vc.videoProcessor = [[VideoProcessor alloc] initWithTitle:@"Motion"
+                                                        processor:[FaceDetectVideoProcessor1 new]];
+        
+        return vc;
+    }]];
+     */
+return menus;
 }
 
 @end

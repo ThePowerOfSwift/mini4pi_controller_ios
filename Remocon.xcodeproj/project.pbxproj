@@ -26,6 +26,10 @@
 		0B6E2DC91DDA872C00FC92FD /* VideoProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DC01DDA872C00FC92FD /* VideoProcessor.m */; };
 		0B6E2DCA1DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DC21DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm */; };
 		0B6E2DCB1DDA872C00FC92FD /* FixedCvVideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DC41DDA872C00FC92FD /* FixedCvVideoCamera.m */; };
+		0B6E2DCE1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DCD1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.mm */; };
+		0B6E2DD11DDCC77C00FC92FD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E2DD01DDCC77C00FC92FD /* Reachability.m */; };
+		0B6E2DD31DDCC9BC00FC92FD /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0B6E2DD21DDCC9BC00FC92FD /* haarcascade_frontalface_alt.xml */; };
+		0B6E2DD51DDCCE3300FC92FD /* haarcascade_smile.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0B6E2DD41DDCCE3300FC92FD /* haarcascade_smile.xml */; };
 		F357B0921DCC4872003274BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0911DCC4872003274BA /* main.m */; };
 		F357B0951DCC4872003274BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F357B0941DCC4872003274BA /* AppDelegate.m */; };
 		F357B09B1DCC4872003274BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F357B0991DCC4872003274BA /* Main.storyboard */; };
@@ -91,6 +95,12 @@
 		0B6E2DC31DDA872C00FC92FD /* MotionDetectVideoProcessor1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionDetectVideoProcessor1.h; sourceTree = "<group>"; };
 		0B6E2DC41DDA872C00FC92FD /* FixedCvVideoCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedCvVideoCamera.m; sourceTree = "<group>"; };
 		0B6E2DC51DDA872C00FC92FD /* FixedCvVideoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedCvVideoCamera.h; sourceTree = "<group>"; };
+		0B6E2DCC1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectVideoProcessor1.h; sourceTree = "<group>"; };
+		0B6E2DCD1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetectVideoProcessor1.mm; sourceTree = "<group>"; };
+		0B6E2DCF1DDCC77C00FC92FD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0B6E2DD01DDCC77C00FC92FD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0B6E2DD21DDCC9BC00FC92FD /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		0B6E2DD41DDCCE3300FC92FD /* haarcascade_smile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_smile.xml; sourceTree = "<group>"; };
 		F357B08D1DCC4872003274BA /* Remocon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remocon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F357B0911DCC4872003274BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F357B0931DCC4872003274BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -202,6 +212,12 @@
 		F357B08F1DCC4872003274BA /* Remocon */ = {
 			isa = PBXGroup;
 			children = (
+				0B6E2DD41DDCCE3300FC92FD /* haarcascade_smile.xml */,
+				0B6E2DD21DDCC9BC00FC92FD /* haarcascade_frontalface_alt.xml */,
+				0B6E2DCF1DDCC77C00FC92FD /* Reachability.h */,
+				0B6E2DD01DDCC77C00FC92FD /* Reachability.m */,
+				0B6E2DCC1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.h */,
+				0B6E2DCD1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.mm */,
 				0B6E2DBA1DDA872C00FC92FD /* VideoProcessingViewController.mm */,
 				0B6E2DBC1DDA872C00FC92FD /* VideoProcessingViewController.h */,
 				0B6E2DBE1DDA872C00FC92FD /* TemplateVideoProcessor.mm */,
@@ -334,6 +350,8 @@
 			files = (
 				F357B0A01DCC4872003274BA /* LaunchScreen.storyboard in Resources */,
 				F357B09D1DCC4872003274BA /* Assets.xcassets in Resources */,
+				0B6E2DD51DDCCE3300FC92FD /* haarcascade_smile.xml in Resources */,
+				0B6E2DD31DDCC9BC00FC92FD /* haarcascade_frontalface_alt.xml in Resources */,
 				F357B09B1DCC4872003274BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,12 +379,14 @@
 				F357B0951DCC4872003274BA /* AppDelegate.m in Sources */,
 				0B6E2D9E1DD6094C00FC92FD /* MenuItems.m in Sources */,
 				0B6E2DAA1DD7044C00FC92FD /* RemoteController.m in Sources */,
+				0B6E2DCE1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.mm in Sources */,
 				0B6E2D8C1DD0C1F500FC92FD /* SettingsTableViewController.m in Sources */,
 				0B6E2D8F1DD0CCAC00FC92FD /* MyDefaults.m in Sources */,
 				0B6E2D891DCE138700FC92FD /* JogControllViewController.m in Sources */,
 				F357B0921DCC4872003274BA /* main.m in Sources */,
 				0B6E2DA11DD6096400FC92FD /* MenuItem.m in Sources */,
 				0B6E2DC81DDA872C00FC92FD /* TemplateVideoProcessor.mm in Sources */,
+				0B6E2DD11DDCC77C00FC92FD /* Reachability.m in Sources */,
 				0B6E2DC61DDA872C00FC92FD /* VideoProcessingViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -84,10 +84,10 @@ using namespace cv;
 //            circle(image, center, 20.0f, Scalar(133, 255, 133), 1, CV_AA);
             
             if(center.x < leftBoader){
-                motorX = 100;
+                motorX = 90;
             }
             else if(center.x > rightBoader){
-                motorX = -100;
+                motorX = -90;
                 
             }
             else{

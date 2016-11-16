@@ -7,6 +7,7 @@
 //
 
 #import "RemoteController.h"
+#import "Reachability.h"
 
 @interface RemoteController() <NSStreamDelegate>
 
@@ -40,6 +41,13 @@
 }
 
 -(void)open{
+    Reachability* reachability = [Reachability reachabilityWithHostName:self.ipAddress];
+    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    if(netStatus == NotReachable){
+        [self.delegate remoteControllerError];
+        return;
+    }
+    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1
                                                   target:self
                                                 selector:@selector(sendState:)
