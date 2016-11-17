@@ -102,7 +102,7 @@ using namespace cv;
         
         cv::Point pt1, pt2;
         if(center.x < leftBoader){
-            motorX = -90;
+            motorX = -80;
 
             // Left Forward
             if(center.y < topBoarder){
@@ -130,6 +130,7 @@ using namespace cv;
             }
         }
         else if(center.x > rightBoader){
+            motorX = 80;
             
             // Right Forward
             if(center.y < topBoarder){
