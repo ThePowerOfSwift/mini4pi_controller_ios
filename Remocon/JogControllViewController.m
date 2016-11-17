@@ -106,7 +106,7 @@
     }
     float x = (self.buttonOrigin.x - self.jocControl.center.x) / self.maxValue * 100;
     float y = (self.buttonOrigin.y - self.jocControl.center.y) / self.maxValue * 100;
-    [self.remoteController setStatusX:x y:y];
+    [self.remoteController setStatusX:x y:y*0.8f];
 
     
     // ドラッグで移動した距離を初期化する

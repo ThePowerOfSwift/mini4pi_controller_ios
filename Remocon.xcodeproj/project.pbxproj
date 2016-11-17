@@ -189,6 +189,19 @@
 			name = VideoProcessor;
 			sourceTree = "<group>";
 		};
+		0B6E2DD61DDE053900FC92FD /* VideoProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				0B6E2DCC1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.h */,
+				0B6E2DCD1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.mm */,
+				0B6E2DC21DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm */,
+				0B6E2DC31DDA872C00FC92FD /* MotionDetectVideoProcessor1.h */,
+				0B6E2DC01DDA872C00FC92FD /* VideoProcessor.m */,
+				0B6E2DC11DDA872C00FC92FD /* VideoProcessor.h */,
+			);
+			name = VideoProcessor;
+			sourceTree = "<group>";
+		};
 		F357B0841DCC4872003274BA = {
 			isa = PBXGroup;
 			children = (
@@ -212,20 +225,15 @@
 		F357B08F1DCC4872003274BA /* Remocon */ = {
 			isa = PBXGroup;
 			children = (
+				0B6E2DD61DDE053900FC92FD /* VideoProcessor */,
 				0B6E2DD41DDCCE3300FC92FD /* haarcascade_smile.xml */,
 				0B6E2DD21DDCC9BC00FC92FD /* haarcascade_frontalface_alt.xml */,
 				0B6E2DCF1DDCC77C00FC92FD /* Reachability.h */,
 				0B6E2DD01DDCC77C00FC92FD /* Reachability.m */,
-				0B6E2DCC1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.h */,
-				0B6E2DCD1DDCC6CD00FC92FD /* FaceDetectVideoProcessor1.mm */,
 				0B6E2DBA1DDA872C00FC92FD /* VideoProcessingViewController.mm */,
 				0B6E2DBC1DDA872C00FC92FD /* VideoProcessingViewController.h */,
 				0B6E2DBE1DDA872C00FC92FD /* TemplateVideoProcessor.mm */,
 				0B6E2DBF1DDA872C00FC92FD /* TemplateVideoProcessor.h */,
-				0B6E2DC01DDA872C00FC92FD /* VideoProcessor.m */,
-				0B6E2DC11DDA872C00FC92FD /* VideoProcessor.h */,
-				0B6E2DC21DDA872C00FC92FD /* MotionDetectVideoProcessor1.mm */,
-				0B6E2DC31DDA872C00FC92FD /* MotionDetectVideoProcessor1.h */,
 				0B6E2DC41DDA872C00FC92FD /* FixedCvVideoCamera.m */,
 				0B6E2DC51DDA872C00FC92FD /* FixedCvVideoCamera.h */,
 				0B6E2DB91DDA86E000FC92FD /* VideoProcessor */,

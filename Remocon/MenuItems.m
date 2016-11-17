@@ -35,7 +35,6 @@
         
         return vc;
     }]];
-    /*
     [menus addObject:[[MenuItem alloc] initWithTitle:@"Face" vcFactory:^UIViewController *{
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         VideoProcessingViewController* vc = [storyboard instantiateViewControllerWithIdentifier:@"VideoControll"];
@@ -44,8 +43,7 @@
         
         return vc;
     }]];
-     */
-return menus;
+    return menus;
 }
 
 @end

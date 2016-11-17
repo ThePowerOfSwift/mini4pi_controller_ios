@@ -53,6 +53,7 @@ static NSString* const cameraSwithObserveKey = @"cameraSwitchOn";
 
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
+    self.cameraSwitch.on = NO;
     self.cameraSwitchOn = self.cameraSwitch.on;
     
     [self.cameraSwitch addTarget:self action:@selector(changeSwitch:) forControlEvents:UIControlEventValueChanged];
@@ -89,7 +90,7 @@ static NSString* const cameraSwithObserveKey = @"cameraSwitchOn";
     // 動画処理のための初期化
     self.videoCamera = [[FixedCvVideoCamera alloc] initWithParentView:self.imageView];
     self.videoCamera.delegate = self.videoProcessor.processor;
-    self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
+    self.videoCamera.defaultAVCaptureDevicePosition = self.cameraSwitchOn? AVCaptureDevicePositionBack : AVCaptureDevicePositionFront;
     self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationLandscapeRight;
     self.videoCamera.defaultFPS = 30;

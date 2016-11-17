@@ -48,14 +48,34 @@ using namespace cv;
     
     //表示する輪郭のカウント
 
+    int width = image.cols;
     int height = image.rows;
     
-    int leftBoader = (image.cols * 0.25f)+0.5;
-    int rightBoader = (image.cols * 0.75f)+0.5;
+    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
     
+    float ratioW = screenWidth / width;
+    float ratioH = screenHeight / height;
+    
+    float ratio = MAX(ratioW, ratioH);
+    
+    float paddingW = (ratio * width - screenWidth)/ratio;
+    float paddingH = (ratio * height - screenHeight)/ratio;
+    
+    
+    int leftBoader = ((width - paddingW) * 0.33f)+0.5 + paddingW/2;
+    int rightBoader = ((width - paddingW) * 0.66f)+0.5 + paddingW/2;
+    
+    int topBoarder = ((height - paddingH) * 0.33f)+0.5 + paddingH/2;
+    int bottomBoarder = ((height - paddingH) * 0.66)+0.5 + paddingH/2;
+   
     line(image, cv::Point(leftBoader, 0), cvPoint(leftBoader, height), Scalar(255, 0, 0), 0.5f, CV_AA);
     line(image, cv::Point(rightBoader, 0), cvPoint(rightBoader, height), Scalar(255, 0, 0), 0.5f, CV_AA);
-    
+
+    cv::putText(image, "Left", cv::Point(paddingW/2, topBoarder), CV_FONT_HERSHEY_PLAIN, 1, cv::Scalar(255, 255, 255));
+    cv::putText(image, "Forward", cv::Point(leftBoader, topBoarder), CV_FONT_HERSHEY_PLAIN, 1, cv::Scalar(255, 255, 255));
+    cv::putText(image, "Right", cv::Point(rightBoader, topBoarder), CV_FONT_HERSHEY_PLAIN, 1, cv::Scalar(255, 255, 255));
+
     
     int motorX = 0, motorY = 0;
     for (auto contour = contours.begin(); contour != contours.end(); contour++){
